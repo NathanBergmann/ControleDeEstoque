@@ -52,11 +52,13 @@ import EssentialLink from 'components/EssentialLink.vue'
 const menuList = [
   {
     title: 'Cadastrar Produto',
-    icon: 'create'
+    icon: 'create',
+    link: '../pages/SearchProducts'
   },
   {
     title: 'Cadastrar Entrada de Produto',
-    icon: 'edit_note'
+    icon: 'edit_note',
+    link: '../pages/RegisterProducts'
   },
   {
     title: 'Cadastrar Saida de Produto',
