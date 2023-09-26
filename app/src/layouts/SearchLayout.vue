@@ -38,7 +38,9 @@
           />
         </q-list>
       </q-drawer>
+        <create-product>
 
+        </create-product>
       <q-page-container>
         <router-view />
       </q-page-container>
@@ -48,6 +50,7 @@
 <script>
 import { defineComponent, ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
+import CreateProduct from 'components/products/CreateProduct.vue'
 
 const menuList = [
   {
@@ -72,7 +75,8 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    EssentialLink,
+    CreateProduct
   },
 
   setup () {
