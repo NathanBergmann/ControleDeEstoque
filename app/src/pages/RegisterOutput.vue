@@ -1,5 +1,5 @@
 <template>
-    <h1>Search Products</h1>
+    <h1>Register Output</h1>
 </template>
 
 <script>

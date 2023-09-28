@@ -1,10 +1,16 @@
 <template>
- <q-input :type="typeInput" :value="value" densee outlined :label="valueLabel"></q-input>
+ <q-input
+    :v-model="text"
+    dense
+    outlined
+    filled
+    :label="valueLabel">
+ </q-input>
 </template>
 
 <script>
 export default {
-  name: 'TemplateInput',
+  name: 'TemplateTextInput',
   props: {
     typeInput: {
       type: String,
@@ -12,7 +18,7 @@ export default {
     },
     value: {
       type: String,
-      default: ''
+      default: 'teste'
     },
     valueLabel: {
       type: String,

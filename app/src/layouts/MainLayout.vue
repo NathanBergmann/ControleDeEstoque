@@ -53,20 +53,22 @@ const menuList = [
   {
     title: 'Cadastrar Produto',
     icon: 'create',
-    link: '/createProduct'
+    link: '/addNewProduct'
   },
   {
     title: 'Cadastrar Entrada de Produto',
     icon: 'edit_note',
-    link: '../pages/RegisterProducts'
+    link: '/registerEntry'
   },
   {
     title: 'Cadastrar Saida de Produto',
-    icon: 'arrow_downward'
+    icon: 'arrow_downward',
+    link: '/registerOutput'
   },
   {
     title: 'Consultar Produtos',
-    icon: 'search'
+    icon: 'search',
+    link: '/searchProduct'
   }
 ]
 

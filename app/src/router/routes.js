@@ -5,7 +5,10 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
-      { path: '/createProduct', component: () => import('layouts/SearchLayout.vue') }
+      { path: '/addNewProduct', component: () => import('src/pages/AddNewProducts.vue') },
+      { path: '/searchProduct', component: () => import('src/pages/SearchProducts.vue') },
+      { path: '/registerOutput', component: () => import('src/pages/RegisterOutput.vue') },
+      { path: '/registerEntry', component: () => import('src/pages/RegisterEntry.vue') }
     ]
   },
   // Always leave this as last one,
