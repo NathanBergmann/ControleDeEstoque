@@ -1,5 +1,5 @@
 <template>
-    <div class="col-auto" style="height: 100px">
+    <div class="col-auto q-pt-md q-pl-lg" style="height: 50px">
         <div class="text-h5 q-auto-sm">
             Adicionar novos produtos
         </div>
