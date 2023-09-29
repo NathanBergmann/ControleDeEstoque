@@ -4,59 +4,48 @@
             Adicionar novos produtos
         </div>
     </div>
-        <div class="col-12 q-pl-lg">
-            <form @submit.prevent.stop="onSubmit" @reset.prevent.stop="onReset" class="q-gutter-md">
-                <div class="row justify-center">
+    <div class="col-12 q-pl-lg">
+        <form class="q-gutter-md" v-on:subimit.prevent="insert">
+            <div class="row justify-center">
+            </div>
+            <div class="row justify-center">
+                <div class="col-4 col-md-4 q-pr-lg">
+                    <TemplateTextInput  valueLabel="Novo Produto" />
                 </div>
-                <div class="row justify-center">
-                    <div class="col-md-4">
-                        <TemplateTextInput
-                            value=":"
-                            valueLabel="Novo Produto"
-                        />
-                    </div>
-                    <div class="col-md-4">
-                        <TemplateTextInput
-                            value=":"
-                            valueLabel="Nome do produto:"
-                            ref="nameProduct"
-                        />
-                    </div>
+                <div class="col-4 col-md-4">
+                    <TemplateTextInput value=":" valueLabel="Nome do produto:" ref="nameProduct" />
                 </div>
-                <div class="row-7 justify-center">
-                    <div class="row justify-center">
-                        <div class="col-md-8">
-                            Descrição do Produto:
-                        </div>
-                    </div>
-                    <div class="row-md-7 justify-center">
-                        <TemplateTextAreaInput
-                            value=""
-                        />
+            </div>
+            <div class="row-7 justify-center">
+                <div class="row justify-center">
+                    <div class="col-md-8">
+                        <label>Descrição do Produto:</label>
                     </div>
                 </div>
                 <div class="row justify-center">
-                    <div class="col-md-4">
-                        <TemplateTextInput
-                            value=""
-                            valueLabel="Preço:"
-                        />
-                    </div>
-                    <div class="col-md-4" >
-                        <TemplateNumberInput
-                            value=""
-                            valueLabel="Quantidade:"
-                        />
-                    </div>
+                    <div class="col-8 col-md-8">
+                    <TemplateTextAreaInput value="" />
                 </div>
-                <div>
-                    <q-btn label="Submit" type="submit" color="primary" />
-                    <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
-                 </div>
-            </form>
-        </div>
+                </div>
+            </div>
+            <div class="row justify-center">
+                <div class="col-4 col-md-4 q-pr-lg">
+                    <TemplateTextInput value="" valueLabel="Preço:" />
+                </div>
+                <div class="col-4 col-md-4 ">
+                    <TemplateNumberInput value="" valueLabel="Quantidade:" />
+                </div>
+            </div>
+            <div class="row justify-end">
+                <div class="col-4 col-md-4">
+                    <q-btn label="Confirmar" type="submit" color="primary"/>
+                    <q-btn label="Cancelar" type="reset" color="primary" flat class="q-ml-sm" />
+                </div>
+                </div>
+        </form>
+    </div>
     <MainLayout>
-       <div class="row" name="divMaster">
+        <div class="row" name="divMaster">
 
         </div>
     </MainLayout>
@@ -74,7 +63,7 @@ export default {
 </script>
 
 <style>
-    .divMaster {
-        background-color: blue;
-    }
+.divMaster {
+    background-color: blue;
+}
 </style>
