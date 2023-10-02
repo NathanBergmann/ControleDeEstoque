@@ -6,10 +6,9 @@ Com o software de Controle de Estoque, oferecemos uma solução completa para ge
 
 ## Cadastro do Produto
 
-O cadastro de produtos permite que você insira informações detalhadas sobre os itens do seu estoque. Os seguintes campos estão disponíveis:
+O cadastro de produtos permite que você insira informações detalhadas sobre os itens do seu estoque. Os seguintes campos estão disponíveis
 
-![](app\src\assets\img\cadastroProduto.png)
-
+<img src="app\src\assets\img\cadastroEntradaProduto.png">
 ### * Nome do Produto
 
 Permite o usuário cadastrar um nome para o produto, facilitando a identificação e localização do item no estoque.
@@ -30,8 +29,7 @@ Informe a quantidade do produto que foi adicionada ao estoque quando foi cadastr
 
 A função de cadastro de entrada permite que você registre a entrada de novos produtos no estoque. Os campos disponíveis são:
 
-![](app\src\assets\img\cadastroEntradaProduto.png)
-
+<img src="app\src\assets\img\cadastroEntradaProduto.png">
 
 ### * Código
 
@@ -55,8 +53,7 @@ Informe a quantidade que será adicionada ao estoque.
 
 ## Cadastro de Saída
 
-![](app\src\assets\img\cadastroSaidaProduto.png)
-
+<img src="app\src\assets\img\cadastroSaidaProduto.png">
 
 O cadastro de saída permite que você registre a retirada de produtos do estoque. Os campos disponíveis são:
 
@@ -84,7 +81,6 @@ Informe a quantidade que será retirada do estoque.
 
 Para consultar produtos no sistema, você pode utilizar o campo "Nome" e digitar o nome do produto que deseja buscar no banco de dados. Isso facilita a localização e visualização dos produtos cadastrados.
 
-![](app\src\assets\img\ConsultaProdutos.png)
-
+<img src="app\src\assets\img\ConsultaProdutos.png">
 
 Utilize o Controle de Estoque para manter um registro preciso de seus produtos e garantir o bom funcionamento do seu negócio.
