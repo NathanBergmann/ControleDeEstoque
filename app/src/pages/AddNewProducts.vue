@@ -80,15 +80,9 @@ export default {
         precoProduto: this.form.precoProduto
       }
 
-      const dataJson = JSON.stringify(dataEnvio);
+      const dataJson = JSON.stringify(dataEnvio)
 
-      const req = await fetch("url", {
-        method: "POST",
-        headers: {"Content-Type": "applications/json"},
-        body: dataJson
-      })
-
-      console.log(req)
+      console.log(dataJson)
     }
   }
 }

@@ -12,7 +12,7 @@
                 dense
                 outlined
                 filled
-                label="Código do Produto">
+                label="Nome do Produto">
                 </q-input>
             </div>
             <div class="col-md-2">
