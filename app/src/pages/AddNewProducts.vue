@@ -5,15 +5,15 @@
         </div>
     </div>
     <div class="col-12 q-pl-lg">
-        <form class="q-gutter-md" v-on:subimit.prevent="insert">
+        <form class="q-gutter-md" @submit.prevent="submit">
             <div class="row justify-center">
             </div>
             <div class="row justify-center">
                 <div class="col-4 col-md-4 q-pr-lg">
-                    <TemplateTextInput  valueLabel="Novo Produto" />
+                    <q-input type="text" disable  label="Novo Produto" />
                 </div>
                 <div class="col-4 col-md-4">
-                    <TemplateTextInput value=":" valueLabel="Nome do produto:" ref="nameProduct" />
+                    <q-input type="text" v-model="form.nomeProduto" label="Nome do produto:" ref="nameProduct" />
                 </div>
             </div>
             <div class="row-7 justify-center">
@@ -24,16 +24,16 @@
                 </div>
                 <div class="row justify-center">
                     <div class="col-8 col-md-8">
-                    <TemplateTextAreaInput value="" />
+                    <q-input type="textarea" filled v-model="form.descricaoProduto"/>
                 </div>
                 </div>
             </div>
             <div class="row justify-center">
                 <div class="col-4 col-md-4 q-pr-lg">
-                    <TemplateTextInput value="" valueLabel="Preço:" />
+                    <q-input mask="#.##" fill-mask="0" reverse-fill-mask v-model="form.precoProduto" value="" label="Preço:" />
                 </div>
                 <div class="col-4 col-md-4 ">
-                    <TemplateNumberInput value="" valueLabel="Quantidade:" />
+                    <q-input v-model="form.quantidadeAdicionada" type="number" label="Quantidade:" />
                 </div>
             </div>
             <div class="row justify-end">
@@ -52,18 +52,48 @@
 </template>
 
 <script>
-import TemplateTextInput from 'src/components/Inputs/TextInput.vue'
 import MainLayout from 'src/layouts/MainLayout.vue'
-import TemplateNumberInput from 'src/components/Inputs/NumberInput.vue'
-import TemplateTextAreaInput from 'src/components/Inputs/TextAreaInput.vue'
 export default {
-  components: { TemplateTextInput, MainLayout, TemplateNumberInput, TemplateTextAreaInput }
+  components: { MainLayout },
+  data () {
+    return {
+      form: {
+        codProduto: '',
+        nomeProduto: '',
+        descricaoProduto: '',
+        quantidadeEstoqueAtual: '',
+        dataUltimaAlteracao: '',
+        quantidadeAdicionada: '',
+        precoProduto: ''
+      }
+    }
+  },
+  methods: {
+    submit () {
+      console.log(this.form)
+      const dataEnvio = {
+        nomeProduto: this.form.nomeProduto,
+        descricaoProduto: this.form.descricaoProduto,
+        quantidadeEstoqueAtual: this.form.quantidadeEstoqueAtual,
+        dataUltimaAlteracao: this.form.dataUltimaAlteracao,
+        quantidadeAdicionada: this.form.quantidadeAdicionada,
+        precoProduto: this.form.precoProduto
+      }
 
+      const dataJson = JSON.stringify(dataEnvio);
+
+      const req = await fetch("url", {
+        method: "POST",
+        headers: {"Content-Type": "applications/json"},
+        body: dataJson
+      })
+
+      console.log(req)
+    }
+  }
 }
 </script>
 
 <style>
-.divMaster {
-    background-color: blue;
-}
+
 </style>

@@ -5,15 +5,15 @@
             Cadastrar Entrada de Produto
         </div>
     </div>
-    <form class="createform" v-on:submit.prevent="insert">
+    <form  id="app-form">
         <div class="col-auto q-pl-lg q-pt-md ">
             <div class="row">
                 <div class="col-md-2 justify-left">
-                    <q-input :v-model="codProduto" dense outlined filled label="Código do Produto">
+                    <q-input v-model="form.codProduto" label="Código do Produto">
                     </q-input>
                 </div>
                 <div class="col-md-10">
-                    <q-btn color="primary" icon="search" label="Pesquisar" />
+                    <q-btn type="button" v-model="searchProduct" color="primary" icon="search" label="Pesquisar" />
                 </div>
             </div>
             <div class="row-7 ">
@@ -24,21 +24,21 @@
                     </div>
                     <div class="row">
                         <div class="col-8 col-md-9">
-                        <TemplateTextAreaInput value="" />
+                        <q-input type="textarea"  filled v-model="form.descricaoProduto"/>
                     </div>
                     </div>
                 </div>
             <div class="row q-pt-lg">
                 <div class="col-3 col-md-3 q-pr-lg">
-                    <q-input :v-model="text" dense outlined filled label="Quantidade Atual no Estoque">
+                    <q-input type="number" v-model="form.quantidadeEstoqueAtual" disable outlined filled label="Quantidade Atual no Estoque">
                     </q-input>
                 </div>
                 <div class="col-2 col-md-3 q-pr-lg">
-                    <q-input :v-model="text" dense outlined filled label="Última Atualização:">
+                    <q-input type="text" disable v-model="form.dataUltimaAlteracao" dense outlined filled label="Última Atualização:">
                     </q-input>
                 </div>
-                <div class="col-2 col-md-3">
-                    <q-input :v-model="text" dense outlined filled label="Quantidade de Entrada">
+                <div class="col-3 col-md-4">
+                    <q-input type="number" v-model="form.quantidadeAdicionada" dense outlined filled label="Quantidade de Entrada">
                     </q-input>
                 </div>
 
@@ -53,13 +53,25 @@
 
 <script>
 
-import TemplateTextAreaInput from 'src/components/Inputs/TextAreaInput.vue'
-
 export default {
-  components: { TemplateTextAreaInput },
+  components: { },
   data () {
     return {
-      codProduto: ''
+      searchProduct: '',
+      form: {
+        codProduto: '',
+        descricaoProduto: 'Está é a descrição do campo',
+        quantidadeEstoqueAtual: '12',
+        dataUltimaAlteracao: '30/09/2023',
+        quantidadeAdicionada: ''
+      }
+    }
+  },
+  watch: {
+    searchProduct: {
+      handler (newValue) {
+        console.log('buscou código')
+      }
     }
   }
 

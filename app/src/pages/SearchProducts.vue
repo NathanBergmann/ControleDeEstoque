@@ -14,17 +14,21 @@
                 filled
                 label="Código do Produto">
                 </q-input>
-        </div>
-        <div class="col-md-2">
-            <q-btn color="primary" icon="search" label="Pesquisar" />
+            </div>
+            <div class="col-md-2">
+                <q-btn color="primary" icon="search" label="Pesquisar" />
+            </div>
         </div>
     </div>
-</div>
-
+    <DataTableResult></DataTableResult>
 </template>
 
 <script>
+
+import DataTableResult from 'src/components/DataTable.vue'
+
 export default {
+  components: { DataTableResult }
 
 }
 </script>

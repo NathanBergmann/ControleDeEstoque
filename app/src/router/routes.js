@@ -8,7 +8,8 @@ const routes = [
       { path: '/addNewProduct', component: () => import('src/pages/AddNewProducts.vue') },
       { path: '/searchProduct', component: () => import('src/pages/SearchProducts.vue') },
       { path: '/registerOutput', component: () => import('src/pages/RegisterOutput.vue') },
-      { path: '/registerEntry', component: () => import('src/pages/RegisterEntry.vue') }
+      { path: '/registerEntry', component: () => import('src/pages/RegisterEntry.vue') },
+      { path: '/resultTable', component: () => import('src/components/DataTable.vue') }
     ]
   },
   // Always leave this as last one,
