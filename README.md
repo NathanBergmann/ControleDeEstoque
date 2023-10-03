@@ -4,6 +4,19 @@
 
 Com o software de Controle de Estoque, oferecemos uma solução completa para gerenciar o estoque da sua empresa. Com ele, você pode cadastrar produtos, registrar entradas e saídas de produtos e realizar consultas e edições de produtos de forma eficiente.
 
+## História de Usuário
+
+Como usuário, gostaria de um sistema que faça o cadastro dos meus produtos, salvando todas as entradas que eu cadastro e as saídas. Muitas vezes, precisamos alterar o cadastro do produto por conta de uma informação que precisamos atualizar ou foi digitado incorretamente, então será necessário poder alterar os produtos cadastrados, mantendo as entradas e saídas do mesmo. Vamos precisar também de uma tela de consulta, para caso não sabemos o código do objeto, tenhamos uma maneira de consultar pelo nome. 
+
+## Tecnologias Utilizadas:
+* Quasar 2;
+* Vue 3;
+* SQLite;
+* JAVA;
+
+## Criação do Banco:
+* Toda a parte de criação do banco de dados está no back-end.
+
 ## Cadastro do Produto
 
 O cadastro de produtos permite que você insira informações detalhadas sobre os itens do seu estoque. Os seguintes campos estão disponíveis
